@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #0af;
+
+            animation: ani-2 5s;
+        }
+        @keyframes ani-2 {
+            0% {
+                width: 200px;
+                height: 200px;
+                background-color: #0af;
+            }
+            50% {
+                width: 400px;
+                height: 200px;
+                background-color: #fa0;
+            }
+            100% {
+                width: 400px;
+                height: 400px;
+                background-color: #f0a;
+            }
+        }
+        @keyframes ani {
+            from{
+                width: 200px;
+                background-color: #0af;
+            }
+            to{
+                width: 400px;
+                background-color: #ff0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
