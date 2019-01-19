@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .flip {
+            width: 200px;
+            height: 300px;
+            /* border: 1px solid #000; */
+
+            position: relative;
+            perspective: 800px;
+        }
+        .front {
+            width: 100%;
+            height: 100%;
+            background-color: #fa0;
+            position: absolute;
+            transition: all .5s;
+            transform-origin: left;
+            z-index: 3;
+        }
+        .back {
+            width: 100%;
+            height: 100%;
+            background-color: #00ccff;
+            position: absolute;
+            transform: rotateY(45deg);
+            backface-visibility: hidden;
+            transition: all .5s;
+            transform-origin: left;
+            opacity: 0;
+            padding: 15px;
+
+        }
+        .flip:hover .front {
+            transform: rotateY(-45deg);
+            opacity: 0;
+        }
+        .flip:hover .back {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="flip">
+        <div class="front">
+            <img src="https://source.unsplash.com/random/200x300" alt="">
+        </div>
+        <div class="back">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatem harum laboriosam delectus sapiente quos repellat veritatis sed? Odit repellendus reiciendis aut fuga, maxime odio fugit quibusdam dolore laborum laudantium!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
