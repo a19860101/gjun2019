@@ -11,6 +11,8 @@
         }
         .container {
             display: flex;
+            /* flex-direction: row-reverse; */
+            flex-wrap: wrap;
             width: 1000px;
             margin: auto;
             background-color: #ccc;
@@ -26,33 +28,53 @@
             */
         }
         .box {
-            width: 250px;
+            width: 300px;
             background-color: #087;
             padding: 15px;
+            display: flex;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box">
-            <h2>title</h2>
+            <h2>title 1</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi esse a at vero id architecto enim maiores, blanditiis excepturi ducimus molestiae assumenda quae voluptate eum recusandae quaerat eligendi maxime!
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 2</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi esse a at vero id architecto enim maiores,.
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 3</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi esse a at vero id architecto enim maiores, blanditiis excepturi ducimus molestiae assumenda quae voluptate eum recusandae quaerat eligendi maxime!
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi esse a at vero id architecto enim maiores, blanditiis excepturi ducimus molestiae assumenda quae voluptate eum recusandae quaerat eligendi maxime!
             </p>
         </div>
+        <!-- <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi esse a at vero id architecto enim maiores, blanditiis excepturi ducimus molestiae assumenda quae voluptate eum recusandae quaerat eligendi maxime!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi esse a at vero id architecto enim maiores,.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi esse a at vero id architecto enim maiores, blanditiis excepturi ducimus molestiae assumenda quae voluptate eum recusandae quaerat eligendi maxime!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi esse a at vero id architecto enim maiores, blanditiis excepturi ducimus molestiae assumenda quae voluptate eum recusandae quaerat eligendi maxime!
+            </p>
+        </div> -->
     </div>
 </body>
 </html>
