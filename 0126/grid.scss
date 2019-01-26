@@ -1,0 +1,23 @@
+$sizes:(
+    sm:480px,
+    md:768px,
+    lg:1024px,
+    xl:1200px
+);
+
+@each $size,$w in $sizes {
+    @media screen and (min-width: $w){
+        .fixed-width {
+            width: $w;
+            margin: auto;
+        }
+        @for $i from 1 through 12 {
+            .col-#{$size}-#{$i}{
+                width: 100% / 12 * $i;
+                float: left;
+                padding: 15px;
+            }
+        }
+    }
+
+}
