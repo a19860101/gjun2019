@@ -4,10 +4,16 @@ $primary-color: #f00;
 * {
   box-sizing: border-box;
 }
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    width: 100% / 12 * $i;
-    float: left;
-    padding: 15px;
+// @for $i from 1 through 12 {
+//   .col-#{$i} {
+//     width: 100% / 12 * $i;
+//     float: left;
+//     padding: 15px;
+//   }
+// }
+$sizes: "sm" "md" "lg" "xl";
+@each $size in $sizes {
+  .col-#{$size}-1 {
+    width: 100%;
   }
 }
