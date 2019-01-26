@@ -11,9 +11,23 @@ $primary-color: #f00;
 //     padding: 15px;
 //   }
 // }
-$sizes: "sm" "md" "lg" "xl";
-@each $size in $sizes {
-  .col-#{$size}-1 {
-    width: 100%;
+$colors: red green blue;
+@each $color in $colors {
+  .box {
+    background-color: $color;
+  }
+}
+
+$sizes:(
+  sm: 480px,
+  md: 768px,
+  xl: 1024px
+);
+.container {
+  width: map-get($sizes,md);
+}
+@each $size,$w in $sizes {
+  .col-#{$size}{
+    width: $w ;
   }
 }
