@@ -24,6 +24,18 @@
     /* #about .row {
       height: 450px ;
     } */
+    #about .row {
+      /* height: auto; */
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    @media screen and (min-width: 720px){
+      #about .row {
+        /* height: 450px; */
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+    }
   </style>
 </head>
 
@@ -111,8 +123,8 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <div id="about" class="container">
-    <div class="row align-items-center" style="height:450px">
+  <div id="about" class="container bg-warning">
+    <div class="row align-items-center">
       <div class="col-md-4">
         <h2>TITLE</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptates quibusdam adipisci mollitia
