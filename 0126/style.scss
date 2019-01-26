@@ -1,18 +1,13 @@
 $primary-color: #f00;
 
-nav {
-    width: 100%;
-    ul {
-        margin: 0;
-        padding: 0;
-        li {
-            float: left;
-            a {
-                display: block;
-                &:hover {
-                    color: $primary-color;
-                }
-            }
-        }
-    }    
+
+* {
+  box-sizing: border-box;
+}
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100% / 12 * $i;
+    float: left;
+    padding: 15px;
+  }
 }
