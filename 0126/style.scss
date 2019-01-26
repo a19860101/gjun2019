@@ -1,2 +1,14 @@
 @import "variables";
 @import "grid";
+* {
+    box-sizing: border-box;
+}
+nav {
+    width: 100px;
+    ul {
+        margin: 0;
+        li {
+            float: left;
+        }
+    }
+}

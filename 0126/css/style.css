@@ -265,4 +265,21 @@
     padding: 15px;
   }
 }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  width: 100px;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav ul li {
+  float: left;
+}
 /*# sourceMappingURL=style.css.map */
