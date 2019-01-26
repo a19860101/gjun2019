@@ -4,10 +4,13 @@ $overlay-color: #65ff37;
     height: $h;
     position: $p;
 }
-
+body {
+    text-align: center;
+}
 .box {
     @include ob(300px,200px,relative);
     overflow: hidden;
+    display: inline-block;
     .gallery {
         @include ob(100%,100%,absolute);
     }
