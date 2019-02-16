@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="gallery">
-        <img src="../../images/bg-1.jpg" alt="">
+        <img src="../../images/bg-1.jpg" alt="" id="g">
     </div>
     <div id="thumbs">
         <img src="../../images/bg-1.jpg" alt="" class="thumb">
@@ -28,7 +28,14 @@
         <img src="../../images/bg-5.jpg" alt="" class="thumb">
     </div>
     <script>
-        
+        let thumb = document.querySelectorAll(".thumb");
+        let g = document.getElementById("g");
+        thumb.forEach(function(t){
+            t.addEventListener("click",function(){
+                let newImg = t.getAttribute("src");
+                g.setAttribute("src",newImg);
+            })
+        })
     </script>
 </body>
 </html>
