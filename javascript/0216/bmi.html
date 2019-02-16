@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="javascript:;">
+        <input type="text" placeholder="請輸入身高" id="h">
+        <input type="text" placeholder="請輸入體重" id="w">
+        <input type="submit" value="計算BMI" onclick="bmi()">
+    </form>
+    <div id="output"></div>
+    <script>
+        function bmi(){
+            let h = document.getElementById("h").value/100;
+            let w = document.getElementById("w").value;
+            let b = Math.floor(w / Math.pow(h,2) * 100) / 100;
+            console.log(b);
+            let output = document.getElementById("output");
+            // output.textContent = Math.round(b);
+            // output.textContent = Math.ceil(b);
+            output.innerHTML = `<h1>您的BMI值為${b}</h1>`;
+        }
+    </script>
+</body>
+</html>
