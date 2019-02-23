@@ -16,6 +16,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: fixed;
+            width: 100% ;
         }
         nav a {
             display: block;
@@ -50,6 +52,9 @@
                 let target = $(this).data("target");
                 let _offset = $(target).offset().top;
                 console.log(_offset);
+                $("html,body").animate({
+                    scrollTop:_offset
+                })
             })
         })
     </script>
