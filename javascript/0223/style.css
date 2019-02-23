@@ -30,6 +30,7 @@ nav {
 }
 nav .menu {
     display: none;
+    clear: both;
 }
 nav li {
     /* float: left; */
@@ -69,6 +70,7 @@ nav a {
     nav .menu {
         float: right;
         display: block;
+        clear: none;
     }
     nav a {
         display: block;
