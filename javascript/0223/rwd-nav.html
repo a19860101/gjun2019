@@ -13,6 +13,14 @@
             $(".hamburger").click(function(){
                 $(".menu").slideToggle()
             })
+            $(window).resize(function(){
+                let w = $(window).width();
+                if(w > 1200){
+                    $(".menu").show();
+                }else{
+                    $(".menu").hide();
+                }
+            });
         })
     </script>
 </head>
