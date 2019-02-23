@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+        nav {
+            height: 50px;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #eee;
+            margin: 0 15px;
+        }
+        #about {
+            background-color: #f84545;
+            height: 1300px;
+            width: 100%;
+        }
+        #product {
+            background-color: #f8e645;
+            height: 1200px;
+            width: 100%;
+        }
+        #service {
+            background-color: #45e3f8;
+            height: 1000px;
+            width: 100%;
+        }
+        #contact {
+            background-color: #7b45f8;
+            height: 1800px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("nav a").click(function(){
+                let target = $(this).data("target");
+                let _offset = $(target).offset().top;
+                console.log(_offset);
+            })
+        })
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#" data-target="#about">ABOUT</a>
+        <a href="#" data-target="#product">PRODUCT</a>
+        <a href="#" data-target="#service">SERVICE</a>
+        <a href="#" data-target="#contact">CONTACT</a>
+    </nav>
+    <div id="about"></div>
+    <div id="product"></div>
+    <div id="service"></div>
+    <div id="contact"></div>
+</body>
+</html>
