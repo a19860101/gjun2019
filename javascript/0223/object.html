@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let banana = {
+            color:["yellow","green"],
+            size:"big",
+            name:"John"
+        }    
+        let dyson = [
+            {
+                name:"Dyson SV11 Fluffy 手持無線除螨吸塵器",
+                price: "12999"
+            },
+            {
+                name: "DysonV8 SV10 Carbon Fibre無線吸塵器",
+                price: "19900"
+            },
+            {
+                name: "dyson Supersonic 吹風機(白色)",
+                price: "14600"
+            },
+            {
+                name: "Dyson Pure hot+cool HP04三合一涼暖空氣清淨機(白)",
+                price: "26900"
+            }
+        ];
+        // for(let i = 0;i<dyson.length;i++){
+        //     console.log(dyson[i].name)
+        //     console.log(dyson[i].price)
+        // }
+        dyson.forEach(function(d){
+            let p = document.createElement("p");
+            let p_text = document.createTextNode(d.name + d.price + "元");
+            p.appendChild(p_text);
+            document.getElementById("output").appendChild(p);
+        })
+    </script>
+</body>
+</html>
