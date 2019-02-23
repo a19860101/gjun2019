@@ -1,0 +1,72 @@
+* {
+    font-family: "Microsoft Jhenghei";
+    box-sizing: border-box;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.full-width {
+    width: 100%;
+}
+.fixed-width {
+    width: 100%;
+}
+nav {
+    /* height: 60px; */
+    background-color: #aaa;
+}
+nav li {
+    /* float: left; */
+    list-style: none;
+}
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    line-height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px dotted #000;
+}
+@media screen and (min-width: 1200px) {
+    .fixed-width {
+        width: 1200px;
+        margin: auto;
+    }
+    nav {
+        height: 60px;
+        background-color: #aaa;
+    }
+    nav li {
+        float: left;
+        list-style: none;
+    }
+    nav .logo {
+        float: left;
+    }
+    nav .menu {
+        float: right;
+    }
+    nav a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        line-height: 60px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 0;
+    }
+}
