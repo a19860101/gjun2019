@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="content">
+    <button id="btn" onclick="output()">CLICK</button>
+    <div id="output"></div>
+    <script>
+        function output(){
+            let content = document.getElementById("content").value;
+            let p = document.createElement("p");
+            let p_text = document.createTextNode(content);
+            p.appendChild(p_text);
+            let output = document.getElementById("output");
+            output.appendChild(p);
+
+        }   
+    </script>
+</body>
+</html>
