@@ -28,6 +28,9 @@ nav {
     /* height: 60px; */
     background-color: #aaa;
 }
+nav .menu {
+    display: none;
+}
 nav li {
     /* float: left; */
     list-style: none;
@@ -40,6 +43,12 @@ nav a {
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 1px dotted #000;
+}
+.hamburger {
+    float: right;
+    line-height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 @media screen and (min-width: 1200px) {
     .fixed-width {
@@ -59,6 +68,7 @@ nav a {
     }
     nav .menu {
         float: right;
+        display: block;
     }
     nav a {
         display: block;
@@ -68,5 +78,8 @@ nav a {
         padding-left: 10px;
         padding-right: 10px;
         border: 0;
+    }
+    .hamburger {
+        display: none;
     }
 }
