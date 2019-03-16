@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="../owl/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../owl/owl.carousel.min.js"></script>
+    <style>
+        #banner {
+            width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner" class="owl-carousel">
+        <img src="../../images/s1.jpg" alt="">
+        <img src="../../images/s2.jpg" alt="">
+        <img src="../../images/s3.jpg" alt="">
+        <img src="../../images/s4.jpg" alt="">
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                autoplay: true
+            });
+        })
+    </script>
+</body>
+</html>
