@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../lightbox/css/lightbox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
     <style>
         .container {
             width: 960px;
@@ -29,43 +31,37 @@
 <body>
     <div class="container">
         <div class="box">
-            <a href="../../images/bg-4.jpg" data-lightbox="box" data-title="123456">
+            <a href="../../images/bg-4.jpg" data-fancybox="box" data-caption="123456">
                 <img src="../../images/bg-4.jpg" alt="">
             </a>
         </div>
         <div class="box">
-            <a href="../../images/bg-3.jpg" data-lightbox="box">
+            <a href="../../images/bg-3.jpg" data-fancybox="box">
                 <img src="../../images/bg-3.jpg" alt="">
             </a>
         </div>
         <div class="box">
-            <a href="../../images/bg-12.jpg" data-lightbox="box">
+            <a href="../../images/bg-12.jpg" data-fancybox="box">
                 <img src="../../images/bg-12.jpg" alt="">
             </a>
         </div>
     </div>
     <div class="container">
         <div class="box">
-            <a href="../../images/bg-1.jpg" data-lightbox="box" data-title="123456">
+            <a href="../../images/bg-1.jpg" data-fancybox="box" data-title="123456">
                 <img src="../../images/bg-1.jpg" alt="">
             </a>
         </div>
         <div class="box">
-            <a href="../../images/bg-13.jpg" data-lightbox="box">
+            <a href="../../images/bg-13.jpg" data-fancybox="box">
                 <img src="../../images/bg-13.jpg" alt="">
             </a>
         </div>
         <div class="box">
-            <a href="../../images/bg-16.jpg" data-lightbox="box">
+            <a href="../../images/bg-16.jpg" data-fancybox="box">
                 <img src="../../images/bg-16.jpg" alt="">
             </a>
         </div>
     </div>
-    <script>
-        lightbox.option({
-          'resizeDuration': 200,
-          "albumLabel": "%1/%2"
-        })
-    </script>
 </body>
 </html>
