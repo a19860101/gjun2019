@@ -9,9 +9,13 @@
     <script>
         $(document).ready(function(){
             $.ajax({
-                url:"test.txt",
+                url:"test.json",
                 success:function(e){
-                    console.log(e);
+                    // console.log(e);
+                    e.forEach(function(data){
+                        console.log(data.name);
+                        console.log(data.price);
+                    })
                 },
                 error:function(){
                     console.log("error");
