@@ -45,6 +45,19 @@
             height: 1800px;
             width: 100%;
         }
+        #gotop {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            right: 30px;
+            bottom: 30px;
+            background-color: #000;
+            z-index: 999;
+            text-decoration: none;
+            color: #fff;
+            line-height: 60px;
+            text-align: center;
+        }
     </style>
     <script>
         $(document).ready(function(){
@@ -54,6 +67,11 @@
                 console.log(_offset);
                 $("html,body").animate({
                     scrollTop:_offset
+                })
+            })
+            $("#gotop").click(function(){
+                $("body,html").animate({
+                    scrollTop: 0
                 })
             })
         })
@@ -70,5 +88,6 @@
     <div id="product"></div>
     <div id="service"></div>
     <div id="contact"></div>
+    <a href="#" id="gotop">TOP</a>
 </body>
 </html>
