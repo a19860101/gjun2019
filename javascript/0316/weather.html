@@ -18,10 +18,25 @@
                 },
                 success:function(e){
                     console.log(e);
+                    let myDate = new Date(e.dt*1000);
+                    // let toDate = myDate.toDateString();
+                    // let toTime = myDate.toTimeString();
+                    let year = myDate.getFullYear();
+                    let month = myDate.getMonth()+1;//0-11
+                    let d = myDate.getDate();
+                    let D = myDate.getDay();//0-6
+                    let h = myDate.getHours();
+                    let m = myDate.getMinutes();
+                    let s = myDate.getSeconds();
+                    if(D==0){
+                        D = "日"
+                    }
+                    let final_date = `${year}-${month}-${d}星期${D}---${h}:${m}:${s}`;
+                    console.log(D);
                     let output = `
                         <div>今天天氣：${e.weather[0].description}</div>
                         <div>今日氣溫：${e.main.temp}</div>
-                        <div>時間:${e.dt}</div>
+                        <div>時間:${final_date}</div>
                     `;
                     $(".container").append(output);
                 },
