@@ -9,9 +9,21 @@
     <script>
         $(function(){
             $.ajax({
-                url: "http://api.openweathermap.org/data/2.5/weather?q=taipei&appid=b1ecbccd638b763d489602917ba47cc3&units=metric",
+                url: "http://api.openweathermap.org/data/2.5/weather",
+                data:{
+                    q: "Taipei",
+                    appid: "b1ecbccd638b763d489602917ba47cc3",
+                    units: "metric",
+                    lang: "zh_TW"
+                },
                 success:function(e){
                     console.log(e);
+                    let output = `
+                        <div>今天天氣：${e.weather[0].description}</div>
+                        <div>今日氣溫：${e.main.temp}</div>
+                        <div>時間:${e.dt}</div>
+                    `;
+                    $(".container").append(output);
                 },
                 error:function(){
                     console.log("error");
@@ -21,6 +33,8 @@
     </script>
 </head>
 <body>
-    
+    <div class="container">
+
+    </div>
 </body>
 </html>
