@@ -9,30 +9,21 @@
     <script>
         $(document).ready(function(){
             $.ajax({
-                url:"test.json",
+                url:"https://opendata.epa.gov.tw/ws/Data/AQI/?$format=json",
+                dataType:"jsonp",
                 success:function(e){
-                    // console.log(e);
                     e.forEach(function(data){
-                        // console.log(data.name);
-                        // console.log(data.price)s;
-                        let output = `<div>${data.name} - ${data.price}</div>`;
-                        $(".container").append(output);
-                    });
-                    $(e).each(function(){
-                        let output = `<div>${this.name} - ${this.price}</div>`;
-                        $(".container").append(output);
+                        console.log(data);
                     })
                 },
                 error:function(){
                     console.log("error");
                 }
-            });
+            })
         })
     </script>
 </head>
 <body>
-    <div class="container">
-
-    </div>
+    
 </body>
 </html>
