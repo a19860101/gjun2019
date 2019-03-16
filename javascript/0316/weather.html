@@ -7,6 +7,7 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        setInterval("location.reload()",3000);
         $(function(){
             $.ajax({
                 url: "http://api.openweathermap.org/data/2.5/weather",
@@ -28,10 +29,9 @@
                     let h = myDate.getHours();
                     let m = myDate.getMinutes();
                     let s = myDate.getSeconds();
-                    if(D==0){
-                        D = "日"
-                    }
-                    let final_date = `${year}-${month}-${d}星期${D}---${h}:${m}:${s}`;
+                    let D_array = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+                    let D_array_jp = ["日","月","火","水","木","金","土"];
+                    let final_date = `${year}-${month}-${d}${D_array[D]}---${h}:${m}:${s}`;
                     console.log(D);
                     let output = `
                         <div>今天天氣：${e.weather[0].description}</div>
