@@ -13,8 +13,14 @@
                 success:function(e){
                     // console.log(e);
                     e.forEach(function(data){
-                        console.log(data.name);
-                        console.log(data.price);
+                        // console.log(data.name);
+                        // console.log(data.price);
+                        let output = `<div>${data.name} - ${data.price}</div>`;
+                        $(".container").append(output);
+                    });
+                    $(e).each(function(){
+                        let output = `<div>${this.name} - ${this.price}</div>`;
+                        $(".container").append(output);
                     })
                 },
                 error:function(){
@@ -25,6 +31,8 @@
     </script>
 </head>
 <body>
-    
+    <div class="container">
+
+    </div>
 </body>
 </html>
