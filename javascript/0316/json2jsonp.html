@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <script>
+        function cbfunc(data){
+            console.log(data);
+            data.forEach(function(d){
+                console.log(d.animal_kind);
+                console.log(d.animal_colour);
+                console.log(d.animal_place);
+            })
+        }    
+    </script>
+    <script src="https://json2jsonp.com/?url=http://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL&callback=cbfunc"></script>
+</body>
+</html>
